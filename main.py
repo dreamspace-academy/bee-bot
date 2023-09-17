@@ -18,7 +18,18 @@ def main():
 
     while True:
         user_question = input('User: ')
-        print(f"{user_question}\n")
+
+        # if 'hi' in user_question.lower() or 'hello' in user_question.lower() or 'good morning' in user_question.lower() or 'good evning' in user_question.lower() or 'good afternoon' in user_question.lower():
+        #     print('hello')
+        #     continue
+
+        # if 'who are you' in user_question.lower():
+        #     print('I am beebot an artificial intelligence bot')
+        #     continue
+
+        # if 'how are you' in user_question.lower():
+        #     print('I am doing good')
+        #     continue
 
         response = conversation({'question': user_question})
 
