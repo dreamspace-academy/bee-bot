@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import bot
 from texttospeech import text_to_speech
+from speechtotext import speech_to_text
 
 
 def main():
@@ -18,7 +19,11 @@ def main():
     conversation = bot.get_conversation_chain(vectorstore)
 
     while True:
-        user_question = input('User: ')
+        try:
+            user_question = speech_to_text()
+        except:
+            text_to_speech("sorry I coouldn't hear you")
+            continue
 
         response = conversation({'question': user_question})
 
