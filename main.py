@@ -27,7 +27,6 @@ def main():
 
         response = conversation({'question': user_question})
 
-        # Safely access 'answers' key and print response
         if 'answer' in response and response['answer']:
             print("BeeBot:", response['answer'], "\n")
             text_to_speech(response['answer'])

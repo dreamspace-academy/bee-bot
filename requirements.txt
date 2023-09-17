@@ -1,0 +1,4 @@
+speech_recognition==3.8.1
+pyttsx3==2.90
+langchain==0.0.184
+dotenv==0.17.0
